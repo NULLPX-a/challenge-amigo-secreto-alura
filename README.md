@@ -1,4 +1,4 @@
-#Juego del Amigo Secreto
+# Juego del Amigo Secreto
 Aplicacion simple para jugar al amigo secreto.
 
 ## Funcionalidades
