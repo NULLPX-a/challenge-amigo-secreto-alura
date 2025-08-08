@@ -11,4 +11,5 @@ Aplicacion simple para jugar al amigo secreto.
 - HTML
 - CSS
 - JavaScript
+
 <link>link a la pagina
