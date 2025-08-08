@@ -23,24 +23,31 @@ function renderListaAmigos() {
         ul.appendChild(li);
     });
 }
-function sortearAmigos() {
-    if (amigos.length < 2) {
-        alert('Necesitas al menos dos amigos para hacer el sorteo.');
+
+// Permitir agregar con Enter
+document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('amigo');
+    input.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            agregarAmigo();
+        }
+    });
+});
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert('Agrega al menos un amigo para sortear.');
         return;
     }
-    const sorteados = [...amigos];
-    const resultados = {};
-    
-    for (let i = 0; i < sorteados.length; i++) {
-        let amigo = sorteados[i];
-        let indiceSorteado;
-        
-        do {
-            indiceSorteado = Math.floor(Math.random() * sorteados.length);
-        } while (sorteados[indiceSorteado] === amigo || resultados[amigo] === sorteados[indiceSorteado]);
-        
-        resultados[amigo] = sorteados[indiceSorteado];
-    }
-    
-    mostrarResultados(resultados);
+    const indice = Math.floor(Math.random() * amigos.length);
+    const elegido = amigos[indice];
+    mostrarResultadoSimple(elegido);
+}
+
+function mostrarResultadoSimple(nombre) {
+    const ul = document.getElementById('resultado');
+    ul.innerHTML = '';
+    const li = document.createElement('li');
+    li.textContent = `El amigo sorteado es: ${nombre}`;
+    ul.appendChild(li);
 }
