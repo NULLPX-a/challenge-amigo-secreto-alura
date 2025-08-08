@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function sortearAmigo() {
-    if (amigos.length === 0) {
-        alert('Agrega al menos un amigo para sortear.');
+    if (amigos.length < 2) {
+        alert('Se necesitan al menos 2 nombres para poder sortear el amigo.');
         return;
     }
     const indice = Math.floor(Math.random() * amigos.length);
