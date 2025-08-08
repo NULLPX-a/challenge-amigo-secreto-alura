@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge Amigo Secreto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
@@ -11,6 +12,19 @@
             <h1>Challenge Amigo Secreto</h1>
             <img src="assets/amigo-secreto.png" alt="Imagen representativa de amigo secreto">
         </header>
+        <section>
+            <div class="description">
+                <p>¡Bienvenido al desafío de Amigo Secreto! Aquí podrás añadir los nombres de tus amigos y sortear quién le toca a quién.</p>
+            </div>
+            
+            <h2>Digite el nombre de sus amigos</h2>
+            <input type="text" id="amigo" placeholder="Escribe un nombre">
+            <button onclick="agregarAmigo()">Añadir</button>
+            <ul id="listaAmigos"></ul>
+            <ul id="resultado"></ul>
+            <button onclick="sortearAmigo()">Sortear amigo</button>
+        </section>
+        
 
 
 
