@@ -23,5 +23,24 @@ function renderListaAmigos() {
         ul.appendChild(li);
     });
 }
-
-// ...puedes agregar aquí la función sortearAmigo() si la necesitas...
+function sortearAmigos() {
+    if (amigos.length < 2) {
+        alert('Necesitas al menos dos amigos para hacer el sorteo.');
+        return;
+    }
+    const sorteados = [...amigos];
+    const resultados = {};
+    
+    for (let i = 0; i < sorteados.length; i++) {
+        let amigo = sorteados[i];
+        let indiceSorteado;
+        
+        do {
+            indiceSorteado = Math.floor(Math.random() * sorteados.length);
+        } while (sorteados[indiceSorteado] === amigo || resultados[amigo] === sorteados[indiceSorteado]);
+        
+        resultados[amigo] = sorteados[indiceSorteado];
+    }
+    
+    mostrarResultados(resultados);
+}
