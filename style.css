@@ -70,6 +70,10 @@ ul#listaAmigos, ul#resultado {
     text-align: left;
     color: #fff;
     font-size: 1.1rem;
+    background: rgba(35, 38, 194, 0.10);
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(35,38,194,0.08);
+    padding: 10px 0 10px 0;
 }
 
 ul#listaAmigos li, ul#resultado li {
@@ -78,6 +82,24 @@ ul#listaAmigos li, ul#resultado li {
     padding: 8px 14px;
     border-radius: 4px;
     border-left: 4px solid #9e31c2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+ul#listaAmigos li span.posicion {
+    display: inline-block;
+    min-width: 28px;
+    background: #9e31c2;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 2px 8px;
+    margin-right: 8px;
+    text-align: center;
+    box-shadow: 0 1px 3px #2326c233;
+    font-size: 1rem;
 }
 
 /* Títulos y textos */
