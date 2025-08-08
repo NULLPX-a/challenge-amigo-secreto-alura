@@ -12,4 +12,4 @@ Aplicacion simple para jugar al amigo secreto.
 - CSS
 - JavaScript
 
-<https://nullpx-a.github.io/challenge-amigo-secreto-alura/>link a la pagina
+<https://nullpx-a.github.io/challenge-amigo-secreto-alura/>
