@@ -3,11 +3,13 @@ let amigos = [];
 function agregarAmigo() {
     const input = document.getElementById('amigo');
     const nombre = input.value.trim();
-    if (nombre) {
-        amigos.push(nombre);
-        input.value = '';
-        renderListaAmigos();
+    if (!nombre) {
+        alert('Por favor, escribe un nombre antes de añadir.');
+        return;
     }
+    amigos.push(nombre);
+    input.value = '';
+    renderListaAmigos();
 }
 
 function renderListaAmigos() {
